@@ -1,0 +1,24 @@
+import React from "react";
+import "./style.css";
+
+export default class App extends React.Component {
+  constructor ()
+  {
+    super();
+    this.state ={
+      show:true
+    }
+  }
+  render (){
+  return (
+    <div>
+      {
+        this.state.show ?
+        <h1>Hide & Show</h1>
+        :null
+      }
+      <button onClick = {()=> {this.setState({show:!this.state.show})}}>Toggle me</button>
+    </div>
+  );
+}
+}
